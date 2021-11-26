@@ -1,16 +1,6 @@
-i<script>
-  // invoerveld = eens
-  // dan wordt de h1 groen en ik bne het ermee eens
-  // oneens of iets anders:
-  //  dan wordt h1 rood en ik ben het ermee oneens
-  
+<script>
   
   function naamfunctie(){
-    //var getal1 = 5;
-    //var getal2 = 7
-    //console.log(deparameter);
-    //document.getElementById("mijntiteltje").innerHTML = "yes"
-    //document.getElementById("mijntiteltje").style.backgroundColor = "aqua"
     var mijninvoer = document.getElementById("invoer").value;
     console.log(mijninvoer)
     if(mijninvoer == "eens"){
@@ -26,14 +16,11 @@ i<script>
   }
 </script>
 
-
-hoi <strong>test</strong>
-<textarea cols="200" disabled="disabled">een tekst</textarea>
 <h1 id="mijntiteltje">Stukkie tekst</h1>
-<i>ff checken</i>
 
-<input type=text id="invoer"></input>
-<input type=button value="klik hier" onclick="naamfunctie()"></input>
-<input type=button value="klik hier" onclick="naamfunctie()"></input>
+
+<input type=text id="invoer" value = "Tekst in de tekstbox"></input>
+<button onclick = "naamfunctie()"> Check</button>
+
 
 
