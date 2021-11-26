@@ -2,10 +2,8 @@
   h1{
     background-color:grey;
     padding:20px;
-    margin:20px;
   }
   input{
-    color:orange;
     font-size:30px
   }
   button{
@@ -20,24 +18,24 @@
   function eersteloop(){
     var hetwoord = document.getElementById("invoer").value;
     var tellen = 0
+    var letter = document.getElementById("check").value
     for(var x=0; x<hetwoord.length; x++){
-      console.log(hetwoord.charAt(x));
-      if (hetwoord.charAt(x)=='e'){
+      
+      if (hetwoord.charAt(x)== letter){
         tellen +=1
       }
-      else{
-        continue
-      }
       
-    }console.log("Aantal e's is: " + tellen)
+      
+      
+    }alert("Aantal " + letter +  "'s is: " + tellen)
     }
   
 </script>
 
 
-
-
-<input type=text id="invoer" ></input>
+<h1>Check het aantal letters in een woord!</h1>
+<input type=text id="check" value=Letter></input><br>
+<input type=text id="invoer" value=Woord ></input>
 <button onclick = "eersteloop()"> Check</button>
 
 
