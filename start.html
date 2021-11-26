@@ -1,26 +1,44 @@
+<style>
+  h1{
+    background-color:grey;
+    padding:20px;
+    margin:20px;
+  }
+  input{
+    color:orange;
+    font-size:30px
+  }
+  button{
+    font-size:30px
+  }
+
+</style>
+
+
 <script>
   
-  function naamfunctie(){
-    var mijninvoer = document.getElementById("invoer").value;
-    console.log(mijninvoer)
-    if(mijninvoer == "eens"){
-      document.getElementById("mijntiteltje").style.backgroundColor = "green"
-      document.getElementById("mijntiteltje").innerHTML = "Ik ben het er mee eens"
-    
-    }
-    else {
-      document.getElementById("mijntiteltje").style.backgroundColor = "red"
-      document.getElementById("mijntiteltje").innerHTML = "Ik ben het er mee oneens"
+  function eersteloop(){
+    var hetwoord = document.getElementById("invoer").value;
+    var tellen = 0
+    for(var x=0; x<hetwoord.length; x++){
+      console.log(hetwoord.charAt(x));
+      if (hetwoord.charAt(x)=='e'){
+        tellen +=1
+      }
+      else{
+        continue
+      }
       
+    }console.log("Aantal e's is: " + tellen)
     }
-  }
+  
 </script>
 
-<h1 id="mijntiteltje">Stukkie tekst</h1>
 
 
-<input type=text id="invoer" value = "Tekst in de tekstbox"></input>
-<button onclick = "naamfunctie()"> Check</button>
+
+<input type=text id="invoer" ></input>
+<button onclick = "eersteloop()"> Check</button>
 
 
 
