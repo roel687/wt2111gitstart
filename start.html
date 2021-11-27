@@ -67,8 +67,45 @@ function klik(knop){
 <br><br><br><br><br><br><br>
 <!-- OPDRACHT 5 -->
 
+<style>
+  div{
+    background-color: blue;
+    display:inline-block;
+    width: 40px;
+    height: 40px;
+  }
+</style>
+
+<script>
+var shippositie =[0,0,1,1]
 
 
+  var dezee =[0,0,0,0];
+  function schot(afzender){
+    //console.log(afzender)
+    //document.getElementById("z"+afzender).style.backgroundColor = "red"
+    dezee[afzender]=1
+    zeeTekenen()
+  }
+  function zeeTekenen(){
+    var alleblokjes = document.getElementsByTagName("div");
+    for(var x=0; x< dezee.length; x++){
+      if(!dezee[x] == 0){
+        alleblokjes[x].style.backgroundColor = 'red';
+      
+      }else{
+        alleblokjes[x].style.backgroundColor = 'blue';
+      }
+      
+    }
+  }
+</script>
+
+
+<div onclick="schot(0)" id='z0'>a</div>
+<div onclick="schot(1)" id='z1'>a</div>
+<div onclick="schot(2)" id='z2'>a</div>
+<div onclick="schot(3)" id='z3'>a</div>
 
 
 
