@@ -1,111 +1,28 @@
-<style>
-  h1{
-    background-color:grey;
-    padding:20px;
-  }
-  input{
-    font-size:30px
-  }
-  button{
-    font-size:30px
-  }
-
-</style>
-
-
-<script>
-  
-  function eersteloop(){
-    var hetwoord = document.getElementById("invoer").value;
-    var tellen = 0
-    var letter = document.getElementById("check").value
-    for(var x=0; x<hetwoord.length; x++){
-      
-      if (hetwoord.charAt(x)== letter){
-        tellen +=1
-      }
-      
-      
-      
-    }alert("Aantal " + letter +  "'s is: " + tellen)
-    }
-  
-</script>
-
-
-<h1>Check het aantal letters in een woord!</h1>
-<input type=text id="check" value=Letter></input><br>
-<input type=text id="invoer" value=Woord ></input>
-<button onclick = "eersteloop()"> Check</button>;
-
-
-
-<br><br><br><br><br><br><br>
-<!-- OPDRACHT 4 -->
-
-
-<script>
-function klik(knop){
-  document.getElementById("letsgo").innerHTML += knop
-
-
-}
-
-</script>
-
-<button onclick="klik('A')">A</button>
-<button onclick="klik('B')">B</button>
-<button onclick="klik('C')">C</button>
-<button onclick="klik('D')">D</button>
-
-<div id="letsgo"></div>
-
-
-
-
-
-<br><br><br><br><br><br><br>
-<!-- OPDRACHT 5 -->
+<!--  OPDRACHT 4  -->
 
 <style>
-  div{
-    background-color: blue;
-    display:inline-block;
-    width: 40px;
-    height: 40px;
+  button {
+    font-size: 50px;
+  }
+  div {
+    width: 500px;
+    height: 500px;
+    border-style: solid;
+    border-color: red;
+    background-color: rgb(199, 199, 199);
   }
 </style>
 
 <script>
-var shippositie =[0,0,1,1]
-
-
-  var dezee =[0,0,0,0];
-  function schot(afzender){
-    //console.log(afzender)
-    //document.getElementById("z"+afzender).style.backgroundColor = "red"
-    dezee[afzender]=1
-    zeeTekenen()
-  }
-  function zeeTekenen(){
-    var alleblokjes = document.getElementsByTagName("div");
-    for(var x=0; x< dezee.length; x++){
-      if(!dezee[x] == 0){
-        alleblokjes[x].style.backgroundColor = 'red';
-      
-      }else{
-        alleblokjes[x].style.backgroundColor = 'blue';
-      }
-      
-    }
+  function clickbutton(buttonLetter) {
+    document.getElementById('clickHistory').innerHTML +=
+      'U heeft op knop ' + buttonLetter + ' gedrukt.<br>';
   }
 </script>
 
+<button id="buttonA" onclick="clickbutton('A')">A</button>
+<button id="buttonB" onclick="clickbutton('B')">B</button>
+<button id="buttonC" onclick="clickbutton('C')">C</button>
+<button id="buttonD" onclick="clickbutton('D')">D</button>
 
-<div onclick="schot(0)" id='z0'>a</div>
-<div onclick="schot(1)" id='z1'>a</div>
-<div onclick="schot(2)" id='z2'>a</div>
-<div onclick="schot(3)" id='z3'>a</div>
-
-
-
+<div id="clickHistory"></div>
